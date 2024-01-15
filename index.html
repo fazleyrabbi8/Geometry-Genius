@@ -70,7 +70,7 @@
                        <button onclick="calculateRectangleArea()"  class="btn btn-primary  w-full">Calculate</button>
                     </div>
                 </div>
-                <!--card 3  -->
+                 <!--card 3 Parralelleogram   -->
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="images/parallelogram.png" alt="triangle" class="rounded-xl" />
@@ -80,20 +80,93 @@
                         <p>Area (A) = b X h</p>
                        <div class="flex gap-2">
                         <p>
-                            <input type="text" placeholder=" b" class=" border bg-gray-300 w-24 pl-4	">
+                            <input id="Para-Base" type="text" placeholder=" b" class=" border bg-gray-300 w-24 pl-4	">
                             <span class="text-base font-normal  ml-3	">cm</span>
                          </p>
                          <p>
-                            <input type="text" placeholder=" h" class="bg-gray-300 w-24 pl-4	">
+                            <input id="Para-Height" type="text" placeholder=" h" class="bg-gray-300 w-24 pl-4	">
                             <span class="text-base font-normal ml-3	">cm</span>
                          </p>
 
                           
                        </div>
-                       <p > Area :<span></span></p>
-                       <button class="btn btn-primary  w-full">Calculate</button>
+                       <p > Area :<span id="para-area"> 0 </span>cm<sup>2</sup></p>
+                       <button onclick=" calcaulateParalelgram ()" class="btn btn-primary  w-full">Calculate</button>
                     </div>
                 </div>
+                 <!--card 4 Rhombus -->
+                 <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images//rhombus.png" alt="Rhombus" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="text-2xl font-bold">Rhombus</h2>
+                        <p>Area (A) = 0.5 X d<sub>1</sub>X d<sub>2</sub></p>
+                       <div class="flex gap-2">
+                        <p>
+                            <input id="Rhombus-Base" type="text" placeholder=" d1  " class=" border bg-gray-300 w-24 pl-4	">
+                            <span class="text-base font-normal  ml-3">cm</span>
+                         </p>
+                         <p>
+                            <input id="Rhombus-Height" type="text" placeholder=" d2" class="bg-gray-300 w-24 pl-4	">
+                            <span class="text-base font-normal ml-3	">cm</span>
+                         </p>
+
+                          
+                       </div>
+                       <p > Area :<span id="rhombus-area"> 0 </span>cm<sup>2</sup></p>
+                       <button onclick="calculaterhombusarea()" class="btn btn-primary  w-full">Calculate</button>
+                    </div>
+                </div>
+                <!--card 5 Pentagon   -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images//pentagon.png" alt="Pentagon" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="text-2xl font-bold">Pentagon</h2>
+                        <p>Area (A) = 0.5 X p X b</p>
+                       <div class="flex gap-2">
+                        <p>
+                            <input id="pentagon-Base" type="text" placeholder=" p" class=" border bg-gray-300 w-24 pl-4	">
+                            <span class="text-base font-normal  ml-3">cm</span>
+                         </p>
+                         <p>
+                            <input id="pentagon-Height" type="text" placeholder=" b" class="bg-gray-300 w-24 pl-4	">
+                            <span class="text-base font-normal ml-3	">cm</span>
+                         </p>
+
+                          
+                       </div>
+                       <p > Area :<span id="pentagon-area"> 0 </span>cm<sup>2</sup></p>
+                       <button onclick="calculatepentagonarea()" class="btn btn-primary  w-full">Calculate</button>
+                    </div>
+                </div>
+                <!--card 6 Ellipse   -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images//ellipse.png" alt="Ellipse" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="text-2xl font-bold">Ellipse</h2>
+                        <p>Area (A) =  π ab</p>
+                       <div class="flex gap-2">
+                        <p>
+                            <input id="Ellipse-Base" type="text" placeholder=" a" class=" border bg-gray-300 w-24 pl-4	">
+                            <span class="text-base font-normal  ml-3	">cm</span>
+                         </p>
+                         <p>
+                            <input id="Ellipse-Height" type="text" placeholder=" b" class="bg-gray-300 w-24 pl-4	">
+                            <span class="text-base font-normal ml-3	">cm</span>
+                         </p>
+
+                          
+                       </div>
+                       <p > Area :<span id="Ellipse-area"> 0 </span>cm<sup>2</sup></p>
+                       <button onclick=" calcaulateellipsearea ()" class="btn btn-primary  w-full">Calculate</button>
+                    </div>
+                </div>
+                  
 
             </div>
             <!-- Area Calculator -->
