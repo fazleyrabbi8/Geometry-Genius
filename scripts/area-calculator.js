@@ -16,10 +16,26 @@ function caclculateTriangleArea() {
   triangleHeight.value = '';
 
 
+  //  validate the input and set a alert
+
+
+  if (isNaN(height) || isNaN(base)) {
+
+    alert('Please enter a valid Number ');
+
+    return;
+
+
+  }
+
+
   //   calculate the area 
 
   const totalArea = 0.5 * height * base;
   //   bring total area  and set the value 
+
+
+  addtocalculateentry( 'Triangle ' , totalArea) ;
 
 
 
@@ -52,10 +68,25 @@ function calculateRectangleArea() {
 
 
 
+  // validate input and set a alert 
+
+  if (isNaN(width) || isNaN(length)) {
+
+    alert('Please enter a number ')
+
+    return;
+
+  }
+
+
+
   // calculate the area and set the value 
 
 
   const totalArea = width * length;
+
+
+  addtocalculateentry( 'Rectangle' , totalArea) ;
 
 
 
@@ -76,7 +107,21 @@ function calcaulateParalelgram() {
 
 
 
+  // validate the input and set a alert 
+
+  if (isNaN(parabase) || isNaN(paraHeight)) {
+
+    alert('Enter valid number ');
+
+    return;
+
+  }
+
+
+
   const totalarea = paraHeight * parabase;
+
+  addtocalculateentry( 'paralellogram' , totalarea) ;
 
   setinnertextbyid('para-area', totalarea)
 
@@ -96,8 +141,16 @@ function calculaterhombusarea() {
 
   const height = getinputvaluebyid('Rhombus-Height');
 
+  // validate  input and set alert
+
+  if (isNaN(base) || isNaN(height)) {
+    alert('Please enter numeric Input')
+    return;
+  }
 
   const area = 0.5 * base * height;
+
+  addtocalculateentry( 'Rhombus' ,area ) ;
 
   setinnertextbyid('rhombus-area', area);
 
@@ -114,7 +167,20 @@ function calculatepentagonarea() {
   const height = getinputvaluebyid('pentagon-Height');
 
 
+
+  //  validate input 
+
+  if (isNaN(side) || isNaN(height)) {
+
+    alert('apni number den nai ')
+    return;
+
+  }
+
+
   const area = 0.5 * side * height;
+
+  addtocalculateentry( 'Pentagon' , area) ;
 
 
   setinnertextbyid('pentagon-area', area);
@@ -124,18 +190,36 @@ function calculatepentagonarea() {
 
 //  calculate Ellipse area 
 
-function calcaulateellipsearea (){
+function calcaulateellipsearea() {
 
 
 
-const base  = getinputvaluebyid('Ellipse-Base') ;
+  const base = getinputvaluebyid('Ellipse-Base');
 
-const side = getinputvaluebyid('Ellipse-Height') ;
+  const side = getinputvaluebyid('Ellipse-Height');
 
-const area  = 3.14 * base * side ;
+  const area = 3.14 * base * side;
 
 
-setinnertextbyid( 'Ellipse-area' , area ) ;
+
+
+
+  //  validate input 
+
+  if (isNaN(side) || isNaN(base)) {
+    alert(' Ekhane Number chara kaj hoyna  ');
+    return;
+
+
+  }
+
+  const fixedarea = area.toFixed(2);
+
+  addtocalculateentry('Ellipse ', fixedarea)
+
+  setinnertextbyid('Ellipse-area', fixedarea);
+
+
 
 }
 
@@ -172,4 +256,25 @@ function setinnertextbyid(elementid, area) {
 
 }
 
+// add to calculation entry 
 
+// get the element where you want to add the entry 
+//  create a element \
+//  set inner html , it could be dynamic 
+//  appendchild the element
+
+
+
+function addtocalculateentry(areatype, area) {
+
+  const calculationarea = document.getElementById('area-calculator');
+
+  const count = calculationarea.childElementCount ;
+
+  const p = document.createElement('p');
+  p.classList.add('my-4')
+
+  p.innerHTML = ` ${count +1} ${areatype}${area} cm<sup>2</sup>  <button class ="btn btn-success "> Convert to m<sup>2</sup>  </button > ` ;
+  calculationarea.appendChild(p);
+
+}
